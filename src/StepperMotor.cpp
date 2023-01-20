@@ -26,3 +26,30 @@ StepperMotor::StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; ui
         digitalWrite(_enablePin,LOW);
     }
 }
+
+// Motor settings
+
+void StepperMotor::invertDirPin()
+{
+    _invert_dir_pin = !_invert_dir_pin;
+}
+
+void StepperMotor::invertEnablePin()
+{
+    _invert_enable_pin = !_invert_enable_pin;
+}
+
+void StepperMotor::setMaxSpeed(uint16_t max_speed)
+{
+    _max_speed = max_speed;
+}
+
+void StepperMotor::setHalfPitch(bool half_pitch)
+{
+    _half_pitch = half_pitch;
+}
+
+bool StepperMotor::getHalfPitch()
+{
+    return _half_pitch;
+}

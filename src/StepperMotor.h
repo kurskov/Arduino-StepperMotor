@@ -68,7 +68,7 @@ class StepperMotor {
 
         bool _invert_dir_pin = false;
         bool _invert_enable_pin = false;
-        bool _halfPitch = false;
+        bool _half_pitch = false;
         uint16_t _max_speed = 300;
 
         uint16_t step_period;
