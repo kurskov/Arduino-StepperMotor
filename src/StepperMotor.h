@@ -16,9 +16,7 @@ class StepperMotor {
     public:
         /* Constructors */
 
-        // Step-dir driver
-        StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin);
-        // Step-dir driver with enable pin
+        // Step-dir driver with or without enable pin
         StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; uint8_t enable_pin);
         // Four pins driver
         StepperMotor(uint16_t steps; uint8_t pin_A; uint8_t pin_B; uint8_t pin_C; uint8_t pin_D);
