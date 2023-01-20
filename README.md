@@ -2,7 +2,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kurskov/Arduino-StepperMotor)](https://github.com/kurskov/Arduino-StepperMotor/releases/latest)
 
 
-[![Language](https://img.shields.io/badge/language-ru-red)](https://github.com/kurskov/Arduino-StepperMotor/blob/develop/README_RU.md)
+[![Translate](https://img.shields.io/badge/translate-ru-red)](https://github.com/kurskov/Arduino-StepperMotor/blob/develop/README_RU.md)
 
 # Stepper motor
 
