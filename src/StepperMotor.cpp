@@ -8,11 +8,11 @@
 
 // Constructors
 
-StepperMotor::StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; uint8_t enable_pin = 0)
+StepperMotor::StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; uint8_t enable_pin)
 {
     _steps = steps;
     _step_pin = step_pin;
-    _der_pin = dir_pin;
+    _dir_pin = dir_pin;
     _enable_pin = enable_pin;
     
     pinMode(_step_pin, OUTPUT);

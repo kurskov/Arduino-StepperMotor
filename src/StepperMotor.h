@@ -17,7 +17,7 @@ class StepperMotor {
         /* Constructors */
 
         // Step-dir driver with or without enable pin
-        StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; uint8_t enable_pin);
+        StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; uint8_t enable_pin = 0);
         // Four pins driver
         StepperMotor(uint16_t steps; uint8_t pin_A; uint8_t pin_B; uint8_t pin_C; uint8_t pin_D);
 
@@ -61,17 +61,20 @@ class StepperMotor {
 
 
     private:
-        uint16_t _steps;
+        uint16_t _steps;                        // number of steps per revolution
         uint8_t _step_pin = 0;
+        uint8_t _dir_pin = 0;
         uint8_t _enable_pin = 0;
         uint8_t _pin_A, _pin_B, _pin_C, _pin_D;
 
         bool _invert_dir_pin = false;
         bool _invert_enable_pin = false;
         bool _half_pitch = false;
-        uint16_t _max_speed = 300;
-
-        uint16_t step_period;
+        bool _direction = true;                 // true - CW, false - CCW
+        uint16_t _max_speed = 300; // FOR DEL
+        uint16_t _min_steps_period;             // max speed
+        uint16_t _steps_period;                 // it's the time between two steps
+        uint16_t _steps_count;                  // number of steps to the target
 };
 
 #endif // _DK_StepperMotor_h
