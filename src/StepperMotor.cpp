@@ -27,6 +27,28 @@ StepperMotor::StepperMotor(uint16_t steps; uint8_t step_pin; uint8_t dir_pin; ui
     }
 }
 
+StepperMotor::StepperMotor(uint16_t steps; uint8_t pin_A; uint8_t pin_B; uint8_t pin_C; uint8_t pin_D)
+{
+    _steps = steps;
+
+    _pin_A = pin_A;
+    pinMode(_pin_A, OUTPUT);
+    digitalWrite(_pin_A, LOW);
+
+    _pin_B = pin_B;
+    pinMode(_pin_B, OUTPUT);
+    digitalWrite(_pin_B, LOW);
+
+    _pin_C = pin_C;
+    pinMode(_pin_C, OUTPUT);
+    digitalWrite(_pin_C, LOW);
+
+    _pin_D = pin_D;
+    pinMode(_pin_D, OUTPUT);
+    digitalWrite(_pin_D, LOW);
+}
+
+
 // Motor settings
 
 void StepperMotor::invertDirPin()
